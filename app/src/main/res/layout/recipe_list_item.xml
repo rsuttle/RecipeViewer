@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:id="@+id/parent"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="10dp"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/imgFood"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_launcher_background"
+
+
+
+            />
+
+
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgFood"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif"
+            android:gravity="left"
+            android:text="Lasagna"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:weightSum="2"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Link"
+                android:layout_below="@+id/txtName"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@color/grey"
+                android:id="@+id/btnLink"
+                android:layout_weight="1"
+                android:autoLink="web"
+                android:linksClickable="true"
+                />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/btnLink"
+                android:layout_alignBaseline="@+id/btnLink"
+                android:text="Add to Favorites"
+                android:layout_weight="1"
+                android:textColor="@color/grey"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:id="@+id/btnAddFavorite"/>
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
